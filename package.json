@@ -1,0 +1,30 @@
+{
+  "name": "aviation-fuel-retrival",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.4.3",
+    "electron-builder": "^22.9.1",
+    "textract": "^2.5.0"
+  },
+  "build": {
+    "appId": "aviation-fuel-retrival",
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "icon": "./data/icon.png",
+      "asar":false
+    }
+  },
+  "scripts": {
+    "start": "electron main.js",
+    "dist": "electron-builder --win --x64"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.16",
+    "mysql": "^2.18.1"
+  }
+}
